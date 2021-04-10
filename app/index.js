@@ -1,0 +1,1 @@
+console.log(process); // Output native Node process object
