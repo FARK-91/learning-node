@@ -1,6 +1,10 @@
-//console.log(process); // Output native Node process object
+let http = require('http');
 
-let path = require('path')
-let ext = path.extname('index.js')
+const ip = '127.0.0.1'; //localhost
+const port = 3005;
 
-console.log(ext); // Output '.js'
+http.createServer((request, response) => {
+    console.log('request ', request.url);
+}).listen(port, ip);
+
+console.log('Running at http://' + ip + ':' + port + '/');
