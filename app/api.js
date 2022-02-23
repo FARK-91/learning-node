@@ -356,7 +356,7 @@ class API {
         }
     }
     static catchAPIrequest(v) {
-        v[0] = "/" ? v = v.substring(1, v.lenght) : null
+        v[0] == "/" ? v = v.substring(1, v.lenght) : null
         if (v.constructor === String)
             if (v.split("/")[0] == 'api') {
                 API.parts = v.split("/")

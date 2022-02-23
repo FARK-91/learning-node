@@ -2,7 +2,8 @@ let http = require('http')
 let mysql = require('mysql')
 let fs = require('fs')
 let path = require('path')
-let API = requere('./api.js')
+let { API, database } = require('./api.js');
+database.create();
 
 
 const ip = '127.0.0.1'; // localhost
